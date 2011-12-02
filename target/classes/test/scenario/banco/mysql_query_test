@@ -1,0 +1,14 @@
+Story Programador acessa o banco de Dados
+Como um	programador
+Eu quero fazer uma conexao com o banco de dados do projeto
+E poder realizar as operações com dados armazenados no banco
+
+Scenario: Aplicação conectou com o banco de dados
+Given o banco de dados jdbc:mysql://localhost:8889/vvs_bbd conectado 
+When a tabela tb_funcionario for solicitada
+Then listar os nomes dos funcionários
+
+Scenario: Aplicação não conectou com o banco de dados
+Given o banco de dados vvs_bbd
+When o conexao nao for estabelecida 
+Then mostrar a mensagem de conexão não estabelecida 

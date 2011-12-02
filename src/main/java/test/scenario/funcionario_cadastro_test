@@ -1,0 +1,14 @@
+Story Diretor gerencia as informacoes dos funcionarios
+Como um	diretor 
+Eu quero gerenciar as informacoes dos funcionarios no sistema
+E ent‹o	n‹o perder tempo procurando em arquivos e pastas fisicas
+
+Scenario: Funcionario nao cadastrado
+Given o cpf do funcionario 01122
+When o diretor inserir o cpf 01122
+Then nao deve mostrar as informacoes do funcionario e retornar a mensagem Funcionario nao cadastrado
+
+Scenario: Funcionario cadastrado
+Given o cpf do funcionario 01122
+When o diretor inserir o cpf 01122 
+Then  disponibilizar suas informcoes e retornar a mensagem 
